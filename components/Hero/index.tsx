@@ -1,6 +1,10 @@
+'use client'
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('hero');
+  const navbar = useTranslations('navbar');
   return (
     <>
       <section
@@ -22,11 +26,11 @@ const Hero = () => {
                     height={1298}
                   /> */}
                   <div className="text-xl text-white text-left font-bold mb-12 w-full lg:!w-[50%] md:text-4xl sm:text-2xl">
-                    <p>We enhance your efficiency and competitiveness with specialized</p>
-                    <p>B2B solutions.</p>
+                    <p>{t('para1')}</p>
+                    <p>{t('para2')}</p>
                     <div className="flex items-start space-x-10 pt-10">
-                      <div>Contact</div>
-                      <div>About</div>
+                      <div>{navbar('contact')}</div>
+                      <div>{navbar('about')}</div>
                     </div>
                   </div>
                   <span className="w-full lg:!w-[50%] m-12">

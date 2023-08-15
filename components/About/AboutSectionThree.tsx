@@ -1,11 +1,14 @@
+'use client'
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 const AboutSectionThree = () => {
+  const t = useTranslations('sectionThree');
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-[160px] pb-16"
+        className="relative z-10 overflow-hidden pt-[200px] pb-16 bg-black"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -31,11 +34,10 @@ const AboutSectionThree = () => {
                       />
                     </span>
                     <div className="text-3xl text-white mb-12 w-full">
-                      <p className=" text-6xl font-semibold">Global Business</p>
-                      <p className=" text-6xl font-semibold">Centralization</p>
+                      <p className=" text-6xl font-semibold">{t('Title1')}</p>
+                      <p className=" text-6xl font-semibold">{t('Title2')}</p>
                       <p className=" pt-4 text-center mx-auto">
-                        Global-level business structures, centralized for easy
-                        and remote management
+                      {t('para1')}
                       </p>
                     </div>
                   </div>
@@ -49,11 +51,10 @@ const AboutSectionThree = () => {
                       />
                     </span>
                     <div className="text-3xl text-white mb-12 w-full">
-                      <p className=" text-7xl font-semibold">Assets</p>
-                      <p className=" text-6xl font-semibold">&Banking</p>
+                      <p className=" text-7xl font-semibold">{t('Title3')}</p>
+                      <p className=" text-6xl font-semibold">&{t('Title4')}</p>
                       <p className=" pt-4 text-center mx-auto">
-                        Strategic banking agreements for enhanced asset
-                        management.
+                      {t('para2')}
                       </p>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="wow fadeInUp relative z-10 bg-black pt-16 md:pt-20 lg:pt-24 "
+        className="wow fadeInUp relative z-10 pt-16 "
         data-wow-delay=".1s"
         id="footer"
       >
@@ -121,9 +121,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="py-8  bg-primary">
+        <div className="py-8  bg-black">
           <div className="container">
-            <p className="text-center text-base text-body-color ">
+            <p className="text-center text-base text-white">
               Copyright © LA FORMULA All Rights Reserved.
             </p>
           </div>

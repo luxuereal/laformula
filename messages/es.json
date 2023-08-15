@@ -1,0 +1,38 @@
+{
+    "navbar": {
+      "contact": "Contacto",
+      "about": "Acerca de",
+      "faq": "FAQ",
+      "service": "Servicios",
+      "language": "Idiomas"
+    },
+    "hero": {
+        "para1":"Elevamos su eficiencia y competitividad con soluciones",
+        "para2":"B2B especializadas."
+    },
+    "sectionOne": {
+        "para":"Generamos resultados destacados al mejorar procesos y gestionar costos de forma eficiente.",
+        "Title1":"Optimización",
+        "Title2":"de Procesos"
+    },
+    "sectionTwo": {
+        "para":"Nuestras soluciones corporativas tienen el potencial necesario para impulsar el avance de su organización.",
+        "Title1":"Corporativas",
+        "Title2":"Soluciones"
+    },
+    "sectionThree": {
+        "para1":"Estructuras empresariales nivel mundial, centralizadas para una administración fácil y remota.",
+        "para2":"Acuerdos bancarios estratégicos para un mejor manejo de sus activos.",
+        "Title1":"Negocio global",
+        "Title2":"Centralización",
+        "Title3":"Activos",
+        "Title4":"Bancario"
+    },
+    "languages": {
+        "en":"Inglés",
+        "es":"Español",
+        "pt":"Portugués",
+        "de":"Alemán",
+        "fr":"Francés"
+    }
+}
