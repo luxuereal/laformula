@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import {useTranslations} from 'next-intl';
 
 const Header = () => {
   // Navbar toggle
@@ -34,14 +35,8 @@ const Header = () => {
     }
   };
 
-  const router = useRouter();
-  const pathname = usePathname();
-  // const msg = useTranslations('header');
-
-  // const setLocale = (locale) => {
-  //   console.log(pathname);
-  //   router.push(locale + pathname);
-  // }
+  const t = useTranslations('navbar');
+  const lang = useTranslations('languages');
   return (
     <>
       <header
@@ -126,7 +121,7 @@ const Header = () => {
                             />
                           </svg>
                         </span>}
-                        Contact
+                        {t('contact')}
                       </Link>
                     </li>
                     <li className="group relative">
@@ -153,7 +148,7 @@ const Header = () => {
                             />
                           </svg>
                         </span>}
-                        About
+                        {t('about')}
                       </Link>
                     </li>
                     <li className="group relative">
@@ -180,7 +175,7 @@ const Header = () => {
                             />
                           </svg>
                         </span>}
-                        FAQ
+                        {t('faq')}
                       </Link>
                     </li>
                     <li className="group relative">
@@ -207,7 +202,7 @@ const Header = () => {
                             />
                           </svg>
                         </span>}
-                        Services
+                        {t('service')}
                       </Link>
                     </li>
                     <li className="group relative">
@@ -215,7 +210,7 @@ const Header = () => {
                         onClick={() => handleSubmenu()}
                         className="flex cursor-pointer items-center justify-between py-2 text-2xl font-bold text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-4 lg:px-0"
                       >
-                        Languages
+                        {t('language')}
                         <span className="pl-3">
                           <svg width="15" height="14" viewBox="0 0 15 14">
                             <path
@@ -235,35 +230,35 @@ const Header = () => {
                           className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                           scroll={false}
                         >
-                          English
+                          {lang('en')}
                         </Link>
                         <Link
                           href="/es"
                           className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                           scroll={false}
                         >
-                          Spanish
+                          {lang('es')}
                         </Link>
                         <Link
                           href="/pt"
                           className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                           scroll={false}
                         >
-                          Portuguese
+                          {lang('pt')}
                         </Link>
                         <Link
-                          href="/pt"
+                          href="/de"
                           className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                           scroll={false}
                         >
-                          German
+                          {lang('de')}
                         </Link>
                         <Link
-                          href="/pt"
+                          href="/fr"
                           className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                           scroll={false}
                         >
-                          French
+                          {lang('fr')}
                         </Link>
                       </div>
                     </li>

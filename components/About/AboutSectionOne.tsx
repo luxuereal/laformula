@@ -1,11 +1,15 @@
+'use client'
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
-const AboutSeciontOne = () => {
+const AboutSectionOne = () => {
+  
+  const t = useTranslations('sectionOne');
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pb-16"
+        className="relative z-10 overflow-hidden pt-16 pb-16 bg-black"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -22,9 +26,9 @@ const AboutSeciontOne = () => {
                     height={1298}
                   /> */}
                   <div className="text-3xl text-white text-left mb-12 w-full lg:!w-[50%]">
-                    <p className=" text-7xl font-bold">Optimizing</p>
-                    <p className=" text-7xl font-bold">Processes</p>
-                    <p>We achieve outstanding results by enhancing processes and efficiently managing costs.</p>
+                    <p className=" text-7xl font-bold">{t('Title1')}</p>
+                    <p className=" text-7xl font-bold">{t('Title2')}</p>
+                    <p className="pt-4">{t('para')}</p>
                   </div>
                   <span className="w-full lg:!w-[50%] m-12">
                     <Image
@@ -44,4 +48,4 @@ const AboutSeciontOne = () => {
   );
 };
 
-export default AboutSeciontOne;
+export default AboutSectionOne;

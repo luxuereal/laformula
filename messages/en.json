@@ -1,0 +1,38 @@
+{
+    "navbar": {
+      "contact": "Contact",
+      "about": "About",
+      "faq": "FAQ",
+      "service": "Services",
+      "language": "Languages"
+    },
+    "hero": {
+        "para1":"We enhance your efficiency and competitiveness with specialized",
+        "para2":"B2B solutions."
+    },
+    "sectionOne": {
+        "para":"We achieve outstanding results by enhancing processes and efficiently managing costs.",
+        "Title1":"Optimizing",
+        "Title2":"Processes"
+    },
+    "sectionTwo": {
+        "para":"Our corporate solutions possess the necessary potential to propel your organization forward.",
+        "Title1":"Corporate",
+        "Title2":"Solutions"
+    },
+    "sectionThree": {
+        "para1":"Global-level business structures, centralized for easy and remote management.",
+        "para2":"Strategic banking agreements for enhanced asset management.",
+        "Title1":"Global Business",
+        "Title2":"Centralization",
+        "Title3":"Assets",
+        "Title4":"Banking"
+    },
+    "languages": {
+        "en":"English",
+        "es":"Spanish",
+        "pt":"Portuguese",
+        "de":"German",
+        "fr":"French"
+    }
+}
