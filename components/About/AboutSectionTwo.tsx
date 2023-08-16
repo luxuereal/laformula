@@ -1,8 +1,24 @@
 'use client'
 import Image from "next/image";
 import {useTranslations} from 'next-intl';
+import { animated, useInView } from "react-spring";
 
 const AboutSectionTwo = () => {
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        x: -80,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      rootMargin: '0% 0px',
+    }
+  )
   const t = useTranslations('sectionTwo');
   return (
     <>
@@ -15,14 +31,14 @@ const AboutSectionTwo = () => {
                 data-wow-delay=".2s"
               >
                 <div className="w-full items-center">
-                  <div className="text-3xl text-white mb-12 w-full">
-                    <p className=" text-7xl font-bold">{t('Title1')}</p>
-                    <p className=" text-7xl font-bold">{t('Title2')}</p>
-                    <p className=" pt-4 w-1/2 text-center mx-auto">
+                  <animated.div ref={ref} style={springs}  className="text-xl lg:text-3xl text-white mb-12 w-full">
+                    <p className="text-4xl lg:text-7xl font-bold ">{t('Title1')}</p>
+                    <p className="text-4xl lg:text-7xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">{t('Title2')}</p>
+                    <p className=" pt-4 lg:w-1/2 text-center mx-auto">
                     {t('para')}
                     </p>
-                  </div>
-                  <div className="lg:flex items-center justify-evenly">
+                  </animated.div>
+                  <animated.div ref={ref} style={springs}  className="flex items-center justify-evenly">
                     <span className="w-1/6">
                       <Image
                         src="/images/brand/Gradient Corporate Gears.png"
@@ -47,7 +63,7 @@ const AboutSectionTwo = () => {
                         height="400"
                       />
                     </span>
-                  </div>
+                  </animated.div>
                 </div>
               </div>
             </div>

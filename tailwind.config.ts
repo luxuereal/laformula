@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const colors = require('tailwindcss/colors')
 
 const config: Config = {
   content: [
@@ -12,13 +13,16 @@ const config: Config = {
       padding: "1rem",
     },
     colors: {
-      current: "currentColor",
-      transparent: "transparent",
-      white: "#FFFFFF",
-      black: "#0A0B20",
+      current: colors.current,
+      transparent: colors.transparent,
+      white: colors.white,
+      black: "#131617",
       primary: "#151730",
-      yellow: "#FBB040",
+      yellow: colors.yellow,
       body_color: "#959CB1",
+      red: colors.red,
+      pink: colors.pink,
+      purple: colors.purple
     },
     screens: {
       "2xs": "340px",
@@ -42,6 +46,6 @@ const config: Config = {
       // => @media (min-width: 1400px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 }
 export default config

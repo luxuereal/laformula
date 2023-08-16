@@ -115,7 +115,7 @@ const Footer = () => {
                     d="M0 352.462h512v74.207H0zM0 85.331h512v74.207H0z"
                   ></path>
                 </svg>
-                <p>| Centroamerica</p>
+                <p className="text-sm lg:text-xl">| Centroamerica</p>
               </div>
             </div>
           </div>
