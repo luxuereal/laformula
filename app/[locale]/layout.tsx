@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params: { locale  } }: Pr
     <html suppressHydrationWarning lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-            <Header />
+            <Header/>
             {children}
             <Footer />
         </NextIntlClientProvider>

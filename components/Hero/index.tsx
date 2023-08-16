@@ -56,12 +56,12 @@ const Hero = () => {
                     width={2164}
                     height={1298}
                   /> */}
-                  <div className="text-base font-bold text-white lg:text-left mb-12 w-full lg:!w-[50%] lg:text-4xl lg:font-black md:text-4xl sm:text-2xl">
-                    <p className="mx-auto">{t('para1')}</p>
+                  <div className="text-base text-white lg:text-left mb-12 w-full lg:!w-[50%] lg:text-4xl lg:font-black md:text-4xl sm:text-2xl">
+                    <p className="font-bold mx-auto">{t('para1')}</p>
                     <p className="text-2xl font-bold lg:text-4xl  bg-gradient-to-r from-red-500 via-pink-500 to-purple-500  text-transparent bg-clip-text">{t('para2')}</p>
-                    <div className="flex items-start space-x-10 pt-10">
-                      <Link href="#footer" onClick={handleScroll} className="flex-1 rounded-[64px] bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 p-4 text-center">{navbar('contact')}</Link>
-                      <Link href="#footer" onClick={handleScroll} className="flex-1 rounded-[64px] bg-body_color p-4 text-center">{navbar('about')}</Link>
+                    <div className="flex items-start space-x-10 pt-10 font-light">
+                      <Link href="#footer" onClick={handleScroll} className="w-1/3 mx-auto rounded-[64px] bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 p-4 text-center">{navbar('contact')}</Link>
+                      {/* <Link href="#footer" onClick={handleScroll} className="flex-1 rounded-[64px] bg-body_color p-4 text-center">{navbar('about')}</Link> */}
                     </div>
                   </div>
                   <span className="w-full lg:!w-[50%] m-12">
