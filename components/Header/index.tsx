@@ -12,19 +12,6 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
 
-  // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
-
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = () => {
@@ -35,25 +22,32 @@ const Header = () => {
     }
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const t = useTranslations('navbar');
   const lang = useTranslations('languages');
   return (
     <>
       <header
-        className={`header top-0 left-0 z-40 flex w-full items-center bg-black ${
-          sticky
-            ? "!fixed !z-[9999] !bg-black !bg-opacity-20 shadow-sticky backdrop-blur-sm !transition"
-            : "absolute"
-        }`}
+        className={`header top-0 left-0 z-40 flex w-full items-center`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-4"
-                } `}
+                className={`header-logo block w-full `}
                 scroll={false}
               >
                 <Image
@@ -99,8 +93,9 @@ const Header = () => {
                   <ul className="block lg:flex lg:space-x-12">
                     <li className="group relative">
                       <Link
-                        href="/"
+                        href="#footer"
                         className={`flex py-2 text-2xl font-bold text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-4 lg:px-0`}
+                        onClick={handleScroll}
                       >
                         {navbarOpen ? "" : <span className="pr-2 hidden lg:block">
                           <svg
@@ -126,8 +121,9 @@ const Header = () => {
                     </li>
                     <li className="group relative">
                       <Link
-                        href="/about"
+                        href="#footer"
                         className={`flex py-2 text-2xl font-bold text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-4 lg:px-0`}
+                        onClick={handleScroll}
                       >
                         {navbarOpen ? "" : <span className="pr-2 hidden lg:block">
                           <svg
@@ -153,7 +149,7 @@ const Header = () => {
                     </li>
                     <li className="group relative">
                       <Link
-                        href="/blog"
+                        href="#"
                         className={`flex py-2 text-2xl font-bold text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-4 lg:px-0`}
                       >
                         {navbarOpen ? "" : <span className="pr-2 hidden lg:block">
@@ -180,7 +176,7 @@ const Header = () => {
                     </li>
                     <li className="group relative">
                       <Link
-                        href="/contact"
+                        href="#"
                         className={`flex py-2 text-2xl font-bold text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-4 lg:px-0`}
                       >
                         {navbarOpen ? "" : <span className="pr-2 hidden lg:block">

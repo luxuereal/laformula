@@ -1,17 +1,34 @@
 'use client'
 import Image from "next/image";
 import {useTranslations} from 'next-intl';
+import { useInView, animated } from '@react-spring/web'
+import { useEffect } from "react";
 
 const AboutSectionOne = () => {
   
   const t = useTranslations('sectionOne');
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 80,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: '0% 0px',
+    }
+  )
   return (
     <>
       <section
         id="home"
         className="relative z-10 overflow-hidden pt-16 pb-16 bg-black"
       >
-        <div className="container">
+        <div className="container">   
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div
@@ -25,19 +42,19 @@ const AboutSectionOne = () => {
                     width={2164}
                     height={1298}
                   /> */}
-                  <div className="text-3xl text-white text-left mb-12 w-full lg:!w-[50%]">
-                    <p className=" text-7xl font-bold">{t('Title1')}</p>
-                    <p className=" text-7xl font-bold">{t('Title2')}</p>
-                    <p className="pt-4">{t('para')}</p>
-                  </div>
-                  <span className="w-full lg:!w-[50%] m-12">
+                  <animated.div ref={ref} style={springs} className="text-xl lg:text-3xl text-white lg:text-left mb-12 w-full lg:!w-[50%]">
+                    <p className=" text-4xl lg:text-7xl font-bold">{t('Title1')}</p>
+                    <p className=" text-4xl lg:text-7xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">{t('Title2')}</p>
+                    <p className="pt-4 mx-auto">{t('para')}</p>
+                  </animated.div>
+                  <animated.span ref={ref} style={springs} className="w-full lg:!w-[50%] m-12 opacity-0">
                     <Image
                       src="/images/brand/Gradient Gear.png"
                       alt="logo"
                       width="500"
                       height="500"
                     />
-                  </span>
+                  </animated.span>
                 </div>
               </div>
             </div>
