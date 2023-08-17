@@ -1,12 +1,12 @@
-'use client'
+"use client";
 import Image from "next/image";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useInView, animated } from "react-spring";
 
 const Hero = () => {
-  const t = useTranslations('hero');
-  const navbar = useTranslations('navbar');
+  const t = useTranslations("hero");
+  const navbar = useTranslations("navbar");
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // first prevent the default behavior
@@ -33,9 +33,9 @@ const Hero = () => {
       },
     }),
     {
-      rootMargin: '0% 0px',
+      rootMargin: "0% 0px",
     }
-  )
+  );
   return (
     <>
       <section
@@ -44,23 +44,33 @@ const Hero = () => {
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
+            <div className="w-full px-4 rounded-lg bg-cover bg-no-repeat" style={{
+                      backgroundImage: "url('/images/texture/texture.png')",
+                    }}>
               <div
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
               >
-                <animated.div ref={ref} style={springs} className="relative w-full items-center lg:flex lg:space-x-24">
-                  {/* <Image
-                    src="/images/texture/Texture Background.png"
-                    alt="logo"
-                    width={2164}
-                    height={1298}
-                  /> */}
+                <animated.div
+                  ref={ref}
+                  style={springs}
+                  className="relative lg:flex lg:space-x-24 items-center"
+                >
                   <div className="text-base text-white lg:text-left mb-12 w-full lg:!w-[50%] lg:text-4xl lg:font-black md:text-4xl sm:text-2xl">
-                    <p className="font-bold mx-auto">{t('para1')}</p>
-                    <p className="text-2xl font-bold lg:text-4xl  bg-gradient-to-r from-red-500 via-pink-500 to-purple-500  text-transparent bg-clip-text">{t('para2')}</p>
+                    <p className="font-light  lg:font-bold mx-auto">
+                      {t("para1")}
+                    </p>
+                    <p className="text-2xl font-light  lg:font-bold lg:text-4xl  bg-gradient-to-r from-red-500 via-pink-500 to-purple-500  text-transparent bg-clip-text">
+                      {t("para2")}
+                    </p>
                     <div className="flex items-start space-x-10 pt-10 font-light">
-                      <Link href="#footer" onClick={handleScroll} className="w-1/3 mx-auto rounded-[64px] bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 p-4 text-center">{navbar('contact')}</Link>
+                      <Link
+                        href="#footer"
+                        onClick={handleScroll}
+                        className="w-1/3 mx-auto rounded-[64px] bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 p-4 text-center"
+                      >
+                        {navbar("contact")}
+                      </Link>
                       {/* <Link href="#footer" onClick={handleScroll} className="flex-1 rounded-[64px] bg-body_color p-4 text-center">{navbar('about')}</Link> */}
                     </div>
                   </div>

@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const pathName = usePathname().slice(1);
   return (
     <>
       <footer
@@ -115,7 +117,7 @@ const Footer = () => {
                     d="M0 352.462h512v74.207H0zM0 85.331h512v74.207H0z"
                   ></path>
                 </svg>
-                <p className="text-sm lg:text-xl">| Centroamerica</p>
+                <p className="text-sm lg:text-xl">| {pathName == "es" ? "Centroamerica" : "Central America"}</p>
               </div>
             </div>
           </div>
@@ -124,7 +126,7 @@ const Footer = () => {
         <div className="py-8  bg-black">
           <div className="container">
             <p className="text-center text-base text-white">
-              Copyright © LA FORMULA All Rights Reserved.
+              Copyright © <span className="font-semibold">LA FORMULA CAPITAL GROUP</span>  All Rights Reserved.
             </p>
           </div>
         </div>

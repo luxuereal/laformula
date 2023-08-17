@@ -10,7 +10,7 @@ import Providers from "./providers";
 const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LA FORMULA",
+  title: "La Formula Capital Group",
   description: "LA FORMULA",
 };
 
