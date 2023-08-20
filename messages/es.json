@@ -16,17 +16,17 @@
         "Title2":"de Procesos"
     },
     "sectionTwo": {
-        "para":"Nuestras soluciones corporativas tienen el potencial necesario para impulsar el avance de su organización.",
-        "Title1":"Corporativas",
-        "Title2":"Soluciones"
+        "para":"Nuestras soluciones corporativas tienen el potencial necesario para impulsar el avance de su negocio.",
+        "Title1":"Soluciones",
+        "Title2":"corporativas"
     },
     "sectionThree": {
         "para1":"Estructuras empresariales nivel mundial, centralizadas para una administración fácil y remota.",
         "para2":"Acuerdos bancarios estratégicos para un mejor manejo de sus activos.",
         "Title1":"Negocio global",
-        "Title2":"Centralización",
+        "Title2":"centralizado",
         "Title3":"Activos",
-        "Title4":"Bancario"
+        "Title4":"bancarios"
     },
     "languages": {
         "en":"Inglés",
