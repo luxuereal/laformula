@@ -41,10 +41,10 @@ const AboutSectionFour = () => {
                     style={springs}
                     className="text-base lg:text-3xl text-white mb-12 w-full"
                   >
-                    <p className="text-2xl lg:text-7xl lg:font-bold ">
+                    <p className="text-xl lg:text-7xl lg:font-bold ">
                       {t("Title1")}
                     </p>
-                    <p className="text-2xl lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
+                    <p className="text-xl lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
                       {t("Title2")}
                     </p>
                   </animated.div>
