@@ -45,10 +45,10 @@ const AboutSectionOne = () => {
                     style={springs}
                     className="text-base lg:text-3xl text-white lg:text-left mb-12 w-full lg:!w-[50%]"
                   >
-                    <p className=" text-3xl font-light lg:text-7xl lg:font-bold">
+                    <p className=" text-2xl font-light lg:text-7xl lg:font-bold">
                       {t("Title1")}
                     </p>
-                    <p className=" text-3xl font-light lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                    <p className=" text-2xl font-light lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
                       {t("Title2")}
                     </p>
                     <p className="pt-4 mx-auto">{t("para")}</p>
