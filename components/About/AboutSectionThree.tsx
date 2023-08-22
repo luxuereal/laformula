@@ -95,7 +95,7 @@ const AboutSectionThree = () => {
                         {t("Title3")}
                       </p>
                       <p className="text-2xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                        &{t("Title4")}
+                        {t("Title4")}
                       </p>
                       <p className=" pt-6 text-center mx-6">{t("para2")}</p>
                     </div>
