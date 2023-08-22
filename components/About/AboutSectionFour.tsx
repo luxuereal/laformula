@@ -25,10 +25,10 @@ const AboutSectionFour = () => {
       <section id="home" className="relative z-10 pt-16 overflow-hidden pb-16">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div
+          <div
               className="w-full px-4 rounded-lg bg-cover bg-no-repeat"
               style={{
-                backgroundImage: "url('/images/brand/La Formula BG 3.0.svg')",
+                backgroundImage: "url('/images/texture/texture.png')",
               }}
             >
               <div
