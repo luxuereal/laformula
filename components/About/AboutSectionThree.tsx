@@ -68,10 +68,10 @@ const AboutSectionThree = () => {
                       />
                     </span>
                     <div className="text-base lg:text-3xl text-white mb-12 w-full">
-                      <p className="text-2xl font-light lg:text-6xl lg:font-semibold">
+                      <p className="text-xl font-light lg:text-6xl lg:font-semibold">
                         {t("Title1")}
                       </p>
-                      <p className="text-2xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                      <p className="text-xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
                         {t("Title2")}
                       </p>
                       <p className=" pt-6 text-center mx-auto">{t("para1")}</p>
@@ -91,10 +91,10 @@ const AboutSectionThree = () => {
                       />
                     </span>
                     <div className="text-base lg:text-3xl text-white mb-12 w-full">
-                      <p className="text-2xl font-light lg:text-6xl lg:font-semibold">
+                      <p className="text-xl font-light lg:text-6xl lg:font-semibold">
                         {t("Title3")}
                       </p>
-                      <p className="text-2xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                      <p className="text-xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
                         {t("Title4")}
                       </p>
                       <p className=" pt-6 text-center mx-6">{t("para2")}</p>
