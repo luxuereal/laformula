@@ -20,7 +20,7 @@ const Footer = () => {
                 <Link
                   target="_blank"
                   href="https://t.me/laformulacapitalgroup"
-                  className="text-white flex items-center space-x-2 lg:text-xl text-base"
+                  className="text-white flex items-center space-x-2 lg:text-xl text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +61,13 @@ const Footer = () => {
                 <Link
                   target="_blank"
                   href="info@laformulacapitalgroup.com"
-                  className="text-white flex items-center space-x-2 lg:text-xl text-base"
+                  className="text-white flex items-center space-x-2 lg:text-xl text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
-                    width={64}
-                    height={64}
+                    width={48}
+                    height={48}
                     id="email"
                   >
                     <g fill="#134563">
@@ -75,17 +75,17 @@ const Footer = () => {
                       <path d="M51.8 50.4H12.3c-2.3 0-4.2-1.9-4.2-4.2V18c0-2.3 1.9-4.2 4.2-4.2h39.5c2.3 0 4.2 1.9 4.2 4.2v28.2c0 2.3-1.9 4.2-4.2 4.2zM12.2 16.5c-.8 0-1.4.6-1.4 1.4v28.2c0 .8.6 1.4 1.4 1.4h39.5c.8 0 1.4-.6 1.4-1.4V17.9c0-.8-.6-1.4-1.4-1.4H12.2z"></path>
                     </g>
                   </svg>
-                  info@laformulacapitalgroup.com
+                  <p> info@laformulacapitalgroup.com</p>
                 </Link>
               </div>
-              <div className="text-white flex items-center space-x-2 lg:text-xl text-base">
+              <div className="text-white flex items-center space-x-2 lg:text-xl text-sm">
                 <svg
                   fill="#2c99dd"
                   version="1.1"
                   id="Capa_1"
                   xmlns="http://www.w3.org/2000/svg"
-                  width={42}
-                  height={42}
+                  width={48}
+                  height={48}
                   viewBox="0 0 395.71 395.71"
                   stroke="#2c99dd"
                 >
@@ -117,7 +117,7 @@ const Footer = () => {
                     d="M0 352.462h512v74.207H0zM0 85.331h512v74.207H0z"
                   ></path>
                 </svg>
-                <p className="text-sm lg:text-xl">| {pathName == "es" ? "Centroamerica" : "Central America"}</p>
+                <p>| {pathName == "es" ? "Centroamerica" : "Central America"}</p>
               </div>
             </div>
           </div>
