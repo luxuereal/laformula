@@ -61,7 +61,7 @@ const AboutSectionFour = () => {
                     style={springs}
                     className="flex justify-center items-center"
                   >
-                    <p className="text-base lg:text-3xl lg:w-1/2 mb-12 border-2 border-white text-white rounded-3xl text-center px-1 lg:px-2 py-4">
+                    <p className="text-base lg:text-3xl lg:w-1/2 mb-12 border-2 bg-body_color/[.07] border-transparent text-white rounded-3xl text-center px-1 lg:px-2 py-4">
                       {t("para")}
                     </p>
                   </animated.div>
